@@ -1,7 +1,7 @@
-/*
-First step — check raw signal
 
-Upload this code:
+//First step — check raw signal
+
+//Upload this code:
 
 void setup() {
   Serial.begin(115200);
@@ -10,23 +10,24 @@ void setup() {
 void loop() {
   int v = analogRead(A0);
   Serial.println(v);
-  delay(10);
+  delay(1000);
 }
 
-What you should see
+//What you should see
 
-With NO load:
+//With NO load:
 
-Values fluctuate around ~512 (middle point)
+//Values fluctuate around ~512 (middle point)
 
-With load ON (kettle, heater, etc.):
+//With load ON (kettle, heater, etc.):
 
-Wave-like fluctuation around 512, e.g.:
-480 → 550 → 500 → 530 → ...
+//Wave-like fluctuation around 512, e.g.:
+//480 → 550 → 500 → 530 → ...
 
-If this works → hardware is correct.
-*/
+//If this works → hardware is correct.
 
+
+/*
 #define SAMPLES 1000
 
 const float ADC_REF = 3.3;        // NodeMCU ADC reference
@@ -70,3 +71,4 @@ void loop() {
 
   delay(1000);
 }
+*/
