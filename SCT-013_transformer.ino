@@ -2,7 +2,7 @@
 //First step — check raw signal
 
 //Upload this code:
-
+/*
 void setup() {
   Serial.begin(115200);
 }
@@ -10,8 +10,9 @@ void setup() {
 void loop() {
   int v = analogRead(A0);
   Serial.println(v);
-  delay(1000);
+  delay(100);
 }
+*/
 
 //What you should see
 
@@ -27,7 +28,7 @@ void loop() {
 //If this works → hardware is correct.
 
 
-/*
+
 #define SAMPLES 1000
 
 const float ADC_REF = 3.3;        // NodeMCU ADC reference
@@ -42,7 +43,7 @@ float calcIrms() {
     int raw = analogRead(A0);
 
     // remove DC bias (~512)
-    float voltage = (raw - 512) * (ADC_REF / ADC_MAX);
+    float voltage = (raw - 484) * (ADC_REF / ADC_MAX);
 
     // convert voltage → current in CT secondary
     float current = voltage / BURDEN;
@@ -71,4 +72,3 @@ void loop() {
 
   delay(1000);
 }
-*/
