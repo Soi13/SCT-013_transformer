@@ -29,3 +29,19 @@
 A burden resistor converts the CT output current into a measurable voltage.<br/>
 A voltage divider consisting of two 100kΩ resistors creates a DC bias at approximately half of the ESP8266 ADC reference voltage. This allows the AC waveform to be shifted into the ADC input range.<br/>
 The capacitor stabilizes the bias voltage and reduces noise.</p>
+
+![Picture of schema](schema_SCT-013.jpg)
+
+<h3>Important Notes</h3>
+<p>Clamp Around One Conductor Only</p>
+
+<h3>Current Calculation</h3>
+<p>The RMS current is calculated from ADC samples:</p>
+<ul>
+<li>Read multiple ADC samples.</li>
+<li>Remove DC offset.</li>
+<li>Convert ADC counts to voltage.</li>
+<li>Convert voltage to CT secondary current.</li>
+<li>Apply CT ratio.</li>
+<li>Calculate RMS current.</li>  
+</ul>
